@@ -71,7 +71,8 @@ export default Controller.extend({
 
     actions: {
         async activateTheme(theme) {
-            const isOverLimit = await this.limit.checkWouldGoOverLimit('customThemes', {value: theme.name});
+            // const isOverLimit = await this.limit.checkWouldGoOverLimit('customThemes', {value: theme.name});
+            const isOverLimit = false;
             if (isOverLimit) {
                 this.set('displayUpgradeModal', true);
                 return;
